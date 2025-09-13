@@ -1,0 +1,9 @@
+.chart-container {
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 2rem auto;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  }
+  

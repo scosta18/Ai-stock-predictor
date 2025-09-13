@@ -1,0 +1,27 @@
+.prediction-container {
+    background: rgba(0, 0, 0, 0.5); /* translucent background */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 2rem auto;
+    width: fit-content;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .prediction-container table {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+  }
+  
+  .prediction-container th,
+  .prediction-container td {
+    border: 1px solid #61dafb;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  
+  .prediction-container th {
+    background-color: rgba(97, 218, 251, 0.2);
+  }
+  

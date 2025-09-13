@@ -1,0 +1,25 @@
+.reasoning-box {
+  background-color: #65a1de;
+  border-left: 4px solid #007bff;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reasoning-box h2 {
+  margin-top: 0;
+  background-color: #9bbcdd;
+  color: #000000;
+}
+
+.reasoning-box strong {
+  color: #212529;
+}
+
+.reasoning-box ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
