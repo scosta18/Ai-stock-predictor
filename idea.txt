@@ -1,0 +1,63 @@
+Frontend: React (for UI and charts)
+
+Backend: FastAPI (to serve data and logic)
+
+ML: Basic time series prediction (e.g. linear regression or simple moving average)
+
+AI: Gemini API (to provide reasoning/explanation)
+
+✅ Project Architecture Overview
+🔹 React Frontend
+Fetches stock data and predictions from FastAPI
+
+Shows:
+
+Past stock data (with a chart, e.g. Chart.js or Recharts)
+
+Predicted data for next 7 days
+
+Gemini-generated reasoning
+
+UI elements: date picker, stock symbol input, loading indicator, prediction display
+
+🔹 FastAPI Backend
+/api/stock/{symbol} → returns historical stock data
+
+/api/predict/{symbol} → returns next 7-day prediction
+
+/api/reasoning/{symbol} → calls Gemini API for insights
+
+🔹 ML Logic
+Use pandas and scikit-learn
+
+Models: Linear Regression or basic time series smoothing
+
+Store/cache fetched data locally (e.g. using yfinance)
+
+🔹 Gemini Integration
+Gemini API call from FastAPI backend (send last N days’ data + model output)
+
+Output: “The stock is likely to rise due to XYZ…”
+
+🧠 Development Phases (within a few days)
+Day 1: FastAPI Backend + Stock Data Fetching
+Use yfinance or Alpha Vantage to pull historical stock data
+
+Set up FastAPI with basic routes (/stock, /predict)
+
+Day 2: ML Prediction Logic
+Use LinearRegression from sklearn for 7-day extrapolation
+
+Return JSON predictions for frontend
+
+Day 3: React Frontend
+Use Axios to hit API
+
+Display charts (Chart.js or Recharts)
+
+Show predictions and reasoning
+
+Day 4: Gemini API Integration
+Write a function that takes data summary and hits Gemini
+
+Add reasoning section below prediction
