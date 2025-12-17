@@ -5,6 +5,8 @@ from stock_utils import fetch_stock_data
 from predictor import predict_next_7_days
 from gemini_utils import get_gemini_reasoning
 
+router = APIRouter()
+
 app = FastAPI()
 
 # Allow frontend to call this API
@@ -98,3 +100,16 @@ def get_reasoning(symbol: str):
         return {"reasoning": reasoning}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Reasoning generation failed: {e}")
+
+
+    @router.get("/stocks/{symbol}/news")
+    def get_stock_news(symbol:str):
+        try:
+            news = fetch_yahoo_news(symbol.upper())
+            return{
+                "symbol": symbol.uppder(),
+                "count": len(news),
+                "news": news
+            }
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
